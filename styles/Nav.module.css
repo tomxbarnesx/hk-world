@@ -279,5 +279,7 @@
 		background: #cc11114f;
 		width: 4em;
 		transform: translateY(50%);
+		display: inline-table;
+		top: 4em;
 	}
 }
