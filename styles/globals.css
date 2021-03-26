@@ -14,3 +14,26 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#__next {
+/*	background-image: url("https://www.transparenttextures.com/patterns/washi.png");
+*/	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.fadeIn-enter {
+  opacity: 0;
+}
+.fadeIn-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fadeIn-enter-done {
+	opacity: 1
+}
+.fadeIn-exit {
+  opacity: 1;
+}
+.fadeIn-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
