@@ -19,6 +19,8 @@ export default function About() {
 			<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 		</Head>
 		<div className={styles.bioContainer}>
+						<div className={styles.heightHandler}>
+
 			<CSSTransition
 		        in={fade}
 		        timeout={1000}
@@ -30,6 +32,8 @@ export default function About() {
 				    <p>COMING  SOON...</p>
 				</div>
 			</CSSTransition>
+
+			</div>
 		</div>
     </div>
   )

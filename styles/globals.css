@@ -16,6 +16,15 @@ a {
   box-sizing: border-box;
 }
 
+footer {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 .fadeIn-enter {
   opacity: 0;
 }
@@ -32,4 +41,15 @@ a {
 .fadeIn-exit-active {
   opacity: 0;
   transition: opacity 350ms ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    width: 91%;
+    margin: 0 auto;
+    border-top: 1px ridge rgb(249, 148, 148);
+    padding-top: .5em;
+  }
 }

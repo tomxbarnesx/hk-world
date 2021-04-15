@@ -19,8 +19,19 @@
 	color: #fff;
 	margin: 0em .65em .65em;
 	font-size: 1.6em;
-	font-weight: ;
 	text-shadow: 2px 2px #f26565;
+	text-transform: uppercase;
+}
+
+.navItem.highlighted {
+	text-decoration: underline;
+}
+
+footer .navItem {
+  color: white;
+  font-size: 1em;
+  text-shadow: unset;
+  text-transform: uppercase;
 }
 
 .socialContainer {
@@ -29,7 +40,7 @@
 	background: #cc11114f;
 	width: 100%;
 	bottom: 0;
-	bottom: calc(var(--vh, 1vh) * 1);
+	bottom: calc(var(--vh, 1vh) * 0);
 	display: flex;
 	z-index: 9999;
 }

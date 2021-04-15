@@ -17,9 +17,18 @@
 	left: 0;
 	right: 0;
 	padding: 1.75em;
+	padding-bottom: 0em;
 	background: #000000b5;
 	font-family: 'Open Sans', sans-serif;
-	margin-top: 7em;
+	min-height: 100vh;
+}
+
+.heightHandler {
+	min-height: 100vh;
+}
+
+.content {
+	padding-top: 5.75em;
 }
 
 .content > h1 {
@@ -43,14 +52,6 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-}
-
-.clippingContainer {
-	position: relative;
-	width: 10em;
-	height: 10em;
-	margin-right: 2em;
-	margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 768px) {

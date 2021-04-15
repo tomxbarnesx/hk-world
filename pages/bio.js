@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Footer from '../components/Footer';
 import styles from '../styles/Bio.module.css'
 
-import PressClipping from '../components/PressClipping.js';
+import PressContainer from '../components/PressContainer.js';
 import pressData from '../utilities/data/pressData.js';
 
 export default function Bio({press}) {
@@ -14,7 +15,7 @@ export default function Bio({press}) {
 		setFade(true)
 	}, [])
 
-	const pressPics = press.map((r, i) => <PressClipping key={`clipping-${i}`} data={r}/>)
+	// const pressPics = press.map((r, i) => <PressClipping key={`clipping-${i}`} data={r}/>)
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -24,6 +25,7 @@ export default function Bio({press}) {
 				<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 			</Head>
 			<div className={styles.bioContainer}>
+				<div className={styles.heightHandler}>
 				<CSSTransition
 			        in={fade}
 			        timeout={1000}
@@ -45,11 +47,11 @@ export default function Bio({press}) {
 					        />
 						</div>
 						<h1 style={{marginTop: "2em"}}>RECENT PRESS</h1>
-						<div className={styles.pressFlex}>
-							{ pressPics }
-						</div>
+						<PressContainer press={press}/>
 					</div>
 				</CSSTransition>
+				</div>
+				<Footer/>
 			</div>
 		</div>
 	)

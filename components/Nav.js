@@ -4,6 +4,7 @@ import styles from '../styles/Nav.module.css'
 import Link from 'next/link'
 import { useWindowSize, windowCatch } from '../utilities/layoutHooks.js'
 import SocialButton from '../components/SocialButton.js';
+import NavLink from './NavLink.js';
 import NavHamburger from './NavHamburger.js';
 
 const socialData = [
@@ -31,6 +32,21 @@ const socialData = [
   }
 ]
 
+const navLinkData = [
+	{
+		url: "/bio",
+		text: "Bio"
+	},
+	{	
+		url: "https://hotknivesworld.bandcamp.com/merch",
+		text: "Store"
+	},
+	{
+		url: "/media",
+		text: "Media"
+	}
+]
+
 const Nav = () => {
 	const windowSize = useWindowSize()
 
@@ -41,6 +57,7 @@ const Nav = () => {
 		}
 	}, []);
 
+	const navLinks = navLinkData.map((link, i) => <NavLink key={`navLink-${i}`} url={link.url} text={link.text} i={i} />)
 	const socialIcons = socialData.map((social, i) => <SocialButton key={`social-${i}`} social={social}/> )
 
 	return (
@@ -64,7 +81,8 @@ const Nav = () => {
 		   { 
 		   		(windowSize.width > 768) ?
 		   			<div className={styles.desktopNavContainer}>
-					    <div className={styles.navItem}>
+					    {navLinks}
+					    {/*<div className={styles.navItem}>
 				    		<Link href="/bio">
 				    			<a>BIO</a>
 				    		</Link>
@@ -78,7 +96,7 @@ const Nav = () => {
 				    		<Link href="/media">
 				    			<a>MEDIA</a>
 				    		</Link>
-				    	</div>
+				    	</div>*/}
 				    </div>
 			    : 
 			    	<NavHamburger />
