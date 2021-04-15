@@ -1,7 +1,6 @@
 .container {
     min-height: 100vh;
 	background-color: #6a1e00d1;
-	z-index: -2;
 	background-image: url("https://www.transparenttextures.com/patterns/washi.png");
 	animation: bg-slide 20s linear infinite;
 	top: 0;
@@ -18,12 +17,12 @@
 	left: 0;
 	right: 0;
 	padding: 1.75em;
-	background: #000000d1;
+	background: #000000b5;
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 7em;
 }
 
-.bioContainer > h1 {
+.content > h1 {
 	text-shadow: 2px 2px #f26565;
 	font-weight: initial;
 	font-size: 2.5em;
@@ -35,6 +34,8 @@
 	width: 100%;
 	height: 26em;
 	margin-top: 3em;
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
 }
 
 .pressFlex {
@@ -48,13 +49,19 @@
 	position: relative;
 	width: 10em;
 	height: 10em;
-	margin: 1em;
+	margin-right: 2em;
+	margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 768px) {
 	.bioContainer {
+		width: 100%;
+		margin-top: unset;
+	}
+
+	.content {
 		width: 70%;
+		margin: 0 auto;
 		padding: 6em 6em;
-		margin-top: 7em;
 	}
 }

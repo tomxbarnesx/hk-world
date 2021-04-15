@@ -23,31 +23,34 @@ export default function Bio({press}) {
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 			</Head>
-			<CSSTransition
-		        in={fade}
-		        timeout={1000}
-		        classNames="fadeIn"
-		        unmountOnExit
-		     >
 			<div className={styles.bioContainer}>
-				<h1>BIO</h1>
-			    <p>Founded in 2017 in Brooklyn, Hot Knives is Tom, Joe, and Alex. All three band members have performed together since 2012 under different monikers and bands, morphing into their current form 5 years into the game. The forthcoming release from the The Hendrix/Spaceman 3/Black Sabbath loving trio, entitled Making Love To Make Music To Make Love To, arrives on May 7, 2021.Ahead of the album’s arrival the band have shared the scorching single “Static Bloom </p>
-				<p>Following a mystical experience that opened a channel of communication with the rock gods themselves, Hot Knives was tapped by the ghost of Jimi Hendrix to bear the torch of rock and roll.</p>
-				<div className={styles.bioPic}>
-					<Image
-			          src="https://hk-world.s3.us-east-2.amazonaws.com/hotKnives_BioPic_CharlieJordan.jpg"
-			          alt="Hot Knives Biopic photographed by Charlie Jordan"
-			          layout='fill'
-			          objectFit='cover'
-			          priority={true}
-			        />
-				</div>
-				<h1 style={{marginTop: "2em"}}>RECENT PRESS</h1>
-				<div className={styles.pressFlex}>
-					{ pressPics }
-				</div>
+				<CSSTransition
+			        in={fade}
+			        timeout={1000}
+			        classNames="fadeIn"
+			        unmountOnExit
+			     >
+					<div className={styles.content}>
+						<h1>BIO</h1>
+						<p>Home grown in Bushwick, NY, steeped in the rarefied air of glue factories, Hot Knives is a project of musical stitching: faded patterns of analog psychedelia // punk stewing in the Bowery since 1984, feeding crocodiles // the funk that departed on the Mothership still beaming messages of hope to those who can pick up its signals. Hot Knives translates this new-old wisdom for our struggling world.</p>
+						<p>Part MC5, part Funkadelic, part Butthole Surfers, throwing back to the sound of electric psychedelia from 67-72, with a bit of bedroom punk weirdness of now. Hot Knives create a face-melting tapestry of nostalgia, blues, and avant-garde. Clothed this way, their music explores love, consciousness, and the spheres above our galaxy's ceiling.</p>
+						<p>The booties must shake. The eyes must open. Take some Hot Knives and get to work.</p>
+						<div className={styles.bioPic}>
+							<Image
+					          src="https://hk-world.s3.us-east-2.amazonaws.com/hotKnives_BioPic_CharlieJordan.jpg"
+					          alt="Hot Knives Biopic photographed by Charlie Jordan"
+					          layout='fill'
+					          objectFit='cover'
+					          priority={true}
+					        />
+						</div>
+						<h1 style={{marginTop: "2em"}}>RECENT PRESS</h1>
+						<div className={styles.pressFlex}>
+							{ pressPics }
+						</div>
+					</div>
+				</CSSTransition>
 			</div>
-			</CSSTransition>
 		</div>
 	)
 }

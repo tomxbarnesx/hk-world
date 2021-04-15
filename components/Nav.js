@@ -63,7 +63,7 @@ const Nav = () => {
 	        </div>
 		   { 
 		   		(windowSize.width > 768) ?
-		   			<>
+		   			<div className={styles.desktopNavContainer}>
 					    <div className={styles.navItem}>
 				    		<Link href="/bio">
 				    			<a>BIO</a>
@@ -79,7 +79,7 @@ const Nav = () => {
 				    			<a>MEDIA</a>
 				    		</Link>
 				    	</div>
-				    </>
+				    </div>
 			    : 
 			    	<NavHamburger />
 		    }
